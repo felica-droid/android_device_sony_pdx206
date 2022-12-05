@@ -964,4 +964,4 @@ vendor/etc/qdcm_calib_data_9.xml
 vendor/etc/change.cfg
 
 # Touchscreen firmware
-vendor/firmware/touch_module_id_0x83.img
+vendor/firmware/touch_module_id_0x94.img

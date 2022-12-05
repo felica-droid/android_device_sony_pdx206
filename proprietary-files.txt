@@ -957,10 +957,10 @@ vendor/lib64/vendor.somc.camera.device@3.4-impl.so
 vendor/lib64/vendor.somc.camera.device@3.5-impl.so
 
 # Display calibration data
-vendor/etc/qdcm_calib_data_9.xml
+# vendor/etc/qdcm_calib_data_1.xml
 
 # Thermal configs
-vendor/etc/change.cfg
+# vendor/etc/change.cfg
 
 # Touchscreen firmware
 vendor/firmware/touch_module_id_0x94.img

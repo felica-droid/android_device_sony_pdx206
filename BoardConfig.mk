@@ -17,15 +17,15 @@
 # Inherit from sony sm8250-common
 -include device/sony/sm8250-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/sony/pdx203
+DEVICE_PATH := device/sony/pdx206
 
 # Display
 TARGET_SCREEN_DENSITY := 420
 
-BOARD_KERNEL_CMDLINE += buildproduct=pdx203
+BOARD_KERNEL_CMDLINE += buildproduct=pdx206
 
 TARGET_KERNEL_SOURCE := kernel/sony/sm8250
-TARGET_KERNEL_CONFIG := pdx203_defconfig
+TARGET_KERNEL_CONFIG := pdx206_defconfig
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
@@ -37,4 +37,4 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # inherit from the proprietary version
--include vendor/sony/pdx203/BoardConfigVendor.mk
+-include vendor/sony/pdx206/BoardConfigVendor.mk

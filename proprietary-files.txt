@@ -1,5 +1,16 @@
 # Stock package version: docomo/SO-52A/SO-52A:12/58.2.B.0.520/058002B000052001073156928:user/release-keys
 
+# NFC
+vendor/etc/libese-nxp.conf
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp_RF.conf
+vendor/etc/libnfc-nxp.conf
+
+# FeliCa
+vendor/etc/felica/common.cfg
+vendor/etc/felica/common.cfg
+vendor/etc/felica/mfs.cfg
+
 # Camera
 vendor/bin/hw/vendor.somc.hardware.camera.provider@1.0-service
 vendor/bin/vendor.qti.qspmhal@1.0-service

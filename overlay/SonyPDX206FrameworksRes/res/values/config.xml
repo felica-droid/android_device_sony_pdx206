@@ -27,8 +27,8 @@
     <array name="config_sfps_sensor_props_0" translatable="false">
         <item></item> <!--item>displayId</item-->
         <item>1080</item> <!--item>sensorLocationX</item-->
-        <item>1080</item> <!--item>sensorLocationY</item-->
-        <item>130</item> <!--item>sensorRadius</item-->
+        <item>1060</item> <!--item>sensorLocationY</item-->
+        <item>240</item> <!--item>sensorRadius</item-->
     </array>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
@@ -46,5 +46,24 @@
          rates are available from hardware composer. Only has an effect if the value is
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
+         vendors to tune the curves to have exact same brightness for different refresh rate. So
+         flicker could be observed at switch time. The issue is worse at the gamma lower end.
+         In addition, human eyes are more sensitive to the flicker at darker environment.
+         To prevent flicker, we only support higher refresh rates if the display brightness is above
+         a threshold.
+         For example, no higher refresh rate if
+             display brightness <= disp0 && ambient brightness <= amb0
+             || display brightness <= disp1 && ambient brightness <= amb1 -->
+    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
+        <item>6</item>
+    </integer-array>
+    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
+        <item>-1</item>
+    </integer-array>
+
+    <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
+    <integer name="config_defaultRefreshRateInZone">60</integer>
 
 </resources>
